@@ -77,4 +77,8 @@ vprintf($company, $array);
 fullStackPHPClassSession("var_dump", __LINE__);
 
 // serve pra ver o tamanho da variável.
-var_dump($array);
+var_dump(
+    $array,
+    $hello,
+    $company
+);
