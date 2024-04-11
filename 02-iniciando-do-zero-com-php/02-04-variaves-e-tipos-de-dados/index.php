@@ -24,6 +24,8 @@ $company = "UpInside"; //virou uma variável.
 $$company = "Treinamentos";
 echo "<h3>{$company} {$UpInside}</h3>";
 
+asdas
+
 /**
  * [ tipo boleano ] true | false
  */
