@@ -8,6 +8,21 @@ fullStackPHPClassName("02.04 - Variáveis e tipos de dados");
  */
 fullStackPHPClassSession("variáveis", __LINE__);
 
+$userFisrtName = "Cristiano";
+$userLastName = "Pereira";
+echo "<h3>{$userFisrtName} {$userLastName}</h3>";
+// OU
+$user_first_name = $userFisrtName;
+$user_last_name = $userLastName;
+echo "<h3>{$user_first_name} {$user_last_name}</h3>";
+
+$userAge = "40";
+echo "<p>{$userFisrtName} {$userLastName} <span class='tag'>tem {$userAge} anos</span></p>";
+
+// variável variável
+$company = "UpInside"; //virou uma variável.
+$$company = "Treinamentos";
+echo "<h3>{$company} {$UpInside}</h3>";
 
 /**
  * [ tipo boleano ] true | false
