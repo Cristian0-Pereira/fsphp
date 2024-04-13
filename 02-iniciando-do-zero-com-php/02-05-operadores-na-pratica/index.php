@@ -59,7 +59,7 @@ $logicB = false;
 $logic = [
     "a && b" => ($logicA && $logicB),
     "a || b" => ($logicA || $logicB),
-    ""
+    "a" => ($logicA),
 ];
 var_dump($logic);
 
