@@ -70,9 +70,13 @@ var_dump($logic);
  */
 fullStackPHPClassSession("aritiméticos", __LINE__);
 
-$cacA = 5;
+$calcA = 5;
 $calcB = 10;
 $calc = [
-
+    "a + b" => ($calcA + $calcB),
+    "a - b" => ($calcA - $calcB),
+    "a * b" => ($calcA * $calcB),
+    "a / b" => ($calcA / $calcB),
+    "a % b" => ($calcA % $calcB),
 ];
 var_dump($calc);
