@@ -69,3 +69,10 @@ var_dump($logic);
  * [ aritiméticos ] https://php.net/manual/pt_BR/language.operators.arithmetic.php
  */
 fullStackPHPClassSession("aritiméticos", __LINE__);
+
+$cacA = 5;
+$calcB = 10;
+$calc = [
+
+];
+var_dump($calc);
