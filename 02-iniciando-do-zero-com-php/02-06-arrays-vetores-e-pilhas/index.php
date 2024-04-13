@@ -7,12 +7,35 @@ fullStackPHPClassName("02.06 - Arrays, vetores e pilhas");
  */
 fullStackPHPClassSession("index array", __LINE__);
 
+$arrA = array(1, 2, 3);
+$arrA = [0, 1, 2, 3];
+
+var_dump($arrA);
+
+$arrayIndex = [
+    "Brian",
+    "Angus",
+    "Malcolm"
+];
+$arrayIndex[] = "Cliff";
+$arrayIndex[] = "Phil";
+
+var_dump($arrayIndex);
 
 /**
  * [ associative array ] "key" => "value"
  */
 fullStackPHPClassSession("associative array", __LINE__);
 
+$arrayAssoc = [
+    "vocal" => "Brian",
+    "solo-guitar" => "Angus",
+    "base-guitar" => "Malcolm",
+    "bass-guitar" => "Cliff",
+];
+$arrayAssoc["drums"] = "Phil";
+
+var_dump($arrayAssoc);
 
 /**
  * [ multidimensional array ] "key" => ["key" => "value"]
