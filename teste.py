@@ -1,21 +1,16 @@
-def part(V, p, r):
-    x = V[r]
-    i = p -1
+def busca_binaria(x, V, p, r):
+    if p <= r:
+        meio = (p + r) // 2
+        if V[meio] == x:
+            return True
+        elif V[meio] > x:
+            return busca_binaria(x, V, p, meio - 1)
+        else:
+            return busca_binaria(x, V, meio + 1, r)
+    else:
+        return False
 
-    for j in range(p, r):
-        if V[j] <= x:
-            i += 1
-            V[i], V[j] = V[j], V[i]
-
-    V[i+1], V[r] = V[r], V[i+1]
-
-    return i + 1
-
-V=[9,4,3,5,1,2]
-p = 0
-r = len(V) -1
-
-posicao = part(V, p, r)
-
-print("Vetor particionado:", V)
-print("Posição:", posicao)
+# Exemplo de uso:
+V = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+x = 2
+print("O valor", x, "foi encontrado:", busca_binaria(x, V, 0, len(V) - 1))
