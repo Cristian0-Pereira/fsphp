@@ -11,4 +11,4 @@ fullStackPHPClassSession("closures", __LINE__);
 /*
  * [ generators ] https://php.net/manual/pt_BR/language.generators.overview.php
  */
-fullStackPHPClassSession("generators", __LINE__);
+fullStackPHPClassSession("generators cris", __LINE__);
