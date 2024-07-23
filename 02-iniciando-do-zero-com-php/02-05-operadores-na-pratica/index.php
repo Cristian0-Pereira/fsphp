@@ -11,10 +11,10 @@ fullStackPHPClassSession("atribuição", __LINE__);
 
 $operatorA = 5;
 $operators = [
-    "a += 5" => ($operatorA += 5),
-    "a -= 5" => ($operatorA -= 5),
-    "a *= 5" => ($operatorA *= 5),
-    "a /= 5" => ($operatorA /= 5)
+    "a + 5" => ($operatorA += 5),
+    "a({$operatorA}) - 5" => ($operatorA -= 5),
+    "a({$operatorA}) * 5" => ($operatorA *= 5),
+    "a({$operatorA}) / 5" => ($operatorA /= 5)
 ];
 var_dump($operators);
 
@@ -57,7 +57,9 @@ fullStackPHPClassSession("lógicos", __LINE__);
 $logicA = true;
 $logicB = false;
 $logic = [
+    //a e b existe?
     "a && b" => ($logicA && $logicB),
+    //a ou b existe?
     "a || b" => ($logicA || $logicB),
     "a" => ($logicA),
     "! a" => (!$logicA),
@@ -73,6 +75,7 @@ fullStackPHPClassSession("aritiméticos", __LINE__);
 $calcA = 5;
 $calcB = 10;
 $calc = [
+    "a(5) e b(10)",
     "a + b" => ($calcA + $calcB),
     "a - b" => ($calcA - $calcB),
     "a * b" => ($calcA * $calcB),
