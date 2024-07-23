@@ -11,7 +11,7 @@ fullStackPHPClassSession("variáveis", __LINE__);
 $userFisrtName = "Cristiano";
 $userLastName = "Pereira";
 echo "<h3>{$userFisrtName} {$userLastName}</h3>";
-// OU
+// OU underscore
 $user_first_name = $userFisrtName;
 $user_last_name = $userLastName;
 echo "<h3>{$user_first_name} {$user_last_name}</h3>";
