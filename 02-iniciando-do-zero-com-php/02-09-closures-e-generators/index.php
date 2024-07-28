@@ -36,7 +36,7 @@ var_dump($myCart);
  */
 fullStackPHPClassSession("generators", __LINE__);
 
-$iterator = 10;
+$iterator = 100;
 $year = 2024;
 $startDate = '07/08/2024'; // Data de início das férias
 
@@ -84,4 +84,17 @@ foreach ($yearDates as $date) {
 
 echo "</div>";
 
+// GENERATORS
 
+function generators($days) {
+    for ($day = 1; $day < $days; $day++) {
+        yield date("d/m/Y", strtotime("+{$day}days"));
+    }
+}
+
+echo "<div style='text-align: center'>";
+foreach(generators($iterator) as $date) {
+    echo "<small class='tag'>{$date}</small>". PHP_EOL;
+}
+
+echo "</div>";
