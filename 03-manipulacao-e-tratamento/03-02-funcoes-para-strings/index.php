@@ -40,7 +40,6 @@ var_dump([
 fullStackPHPClassSession("substituição", __LINE__);
 
 $mbReplace = $mbString ." Fui, iria novamente, e foi épico!";
-
 var_dump([
     "mb_strlen" => mb_strlen($mbReplace),
     "mb_strpos" => mb_strpos($mbReplace, ", "),
@@ -50,14 +49,36 @@ var_dump([
     "mb_strrchr" => mb_strrchr($mbReplace, ", ", true)
 ]);
 
-$mbReplace = $string;
+$mbStrReplace = $string;
 
-echo "<p>" . $string . "</p>";
-echo "<p>" . str_replace("AC/DC", "Nirvana", $mbReplace) . "</p>";
-echo "<p>" . str_replace("incrível", "uma merda!", $mbReplace) . "</p>";
+echo "<p>" . $mbStrReplace . "</p>";
+echo "<p>" . str_replace("AC/DC", "Nirvana", $mbStrReplace) . "</p>";
+echo "<p>" . str_replace(["AC/DC", "incrível"], ["Nirvana", "ÉPICOOO!!"], $mbStrReplace) . "</p>";
 
+$article = <<<ROCK
+    <article>
+        <h3>event</h3>
+        <p>desc</p>
+    </article>
+ROCK;
+
+$articleData = [
+    "event" => "Rock in Rio",
+    "desc" => $mbReplace
+];
+
+echo str_replace(array_keys($articleData), array_values($articleData), $article);
 
 /**
  * [ parse string ] parse_str | mb_parse_str
  */
 fullStackPHPClassSession("parse string", __LINE__);
+
+$endPoint = "name=Cristiano&email=cristiano@upinside.com.br";
+mb_parse_str($endPoint, $parseEndPoint);
+
+var_dump([
+    $endPoint,
+    $parseEndPoint,
+    (object)$parseEndPoint
+]);
