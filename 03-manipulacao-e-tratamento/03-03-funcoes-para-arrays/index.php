@@ -121,7 +121,7 @@ $replaces = "{{" . implode("}}&{{", array_keys($profile)) . "}}";
 
 // var_dump(explode("&", $replaces));
 echo str_replace(
-    explode("&+", $replaces),
+    explode("&", $replaces),
     array_values($profile),
     $template
 );
